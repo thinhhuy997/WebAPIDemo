@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Thinh\\.nuget\\packages\\": {}
+    "C:\\Users\\thinh\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thinh\\source\\repos\\WebAPIDemo\\WebAPIDemo\\WebAPIDemo.csproj",
+      "projectUniqueName": "C:\\Users\\thinh\\Desktop\\DOT NET\\WebAPIDemo\\WebAPIDemo\\WebAPIDemo.csproj",
       "projectName": "WebAPIDemo",
-      "projectPath": "C:\\Users\\Thinh\\source\\repos\\WebAPIDemo\\WebAPIDemo\\WebAPIDemo.csproj",
-      "packagesPath": "C:\\Users\\Thinh\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thinh\\source\\repos\\WebAPIDemo\\WebAPIDemo\\obj\\",
+      "projectPath": "C:\\Users\\thinh\\Desktop\\DOT NET\\WebAPIDemo\\WebAPIDemo\\WebAPIDemo.csproj",
+      "packagesPath": "C:\\Users\\thinh\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\thinh\\Desktop\\DOT NET\\WebAPIDemo\\WebAPIDemo\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Thinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\thinh\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

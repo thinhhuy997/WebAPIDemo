@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using WebAPIDemo.Filters;
+using WebAPIDemo.Filters.ActionFilters;
+using WebAPIDemo.Filters.ExceptionFilters;
 using WebAPIDemo.Models;
 using WebAPIDemo.Models.Repositories;
 
@@ -13,7 +15,7 @@ namespace WebAPIDemo.Controllers
         [HttpGet]
         public IActionResult GetShirts()
         {
-            return Ok("Reading all the shirts");
+            return Ok(ShirtRepository.GetShirts());
         }
 
         [HttpGet("{id}")]
@@ -24,18 +26,35 @@ namespace WebAPIDemo.Controllers
         }
 
         [HttpPost]
+        [Shirt_ValidateCreateShirtFilter]
         public IActionResult CreateShirt([FromBody]Shirt shirt) {
-            return Ok("Creating a shirt");
+            
+
+            ShirtRepository.AddShirt(shirt);
+
+            return CreatedAtAction(nameof(GetShirtById),
+                new { id = shirt.ShirtId },
+                shirt
+                );
         }
 
         [HttpPut("{id}")]
-        public IActionResult UpdateShirt(int id) {
-            return Ok($"Updating shirt: {id}");
+        //[Shirt_ValidateShirtIdFilter]
+        [Shirt_ValidateUpdateShirtFilter]
+        [Shirt_HandleUpdateExceptionsFilter]
+        public IActionResult UpdateShirt(int id, Shirt shirt) {
+
+            ShirtRepository.UpdateShirt(shirt);
+
+            return NoContent();
         }
 
         [HttpDelete("{id}")]
         public IActionResult DeleteShirt(int id) {
-            return Ok($"Deleting shirt: {id}");
+            var shirt = ShirtRepository.GetShirtById(id);
+            ShirtRepository.DeleteShirt(id);
+
+            return Ok(shirt);
         }
     }
 }
