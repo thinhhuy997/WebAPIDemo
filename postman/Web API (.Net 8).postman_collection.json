@@ -1,0 +1,86 @@
+{
+	"info": {
+		"_postman_id": "99e55192-82e3-495d-8cad-39bfc711299a",
+		"name": "Web API (.Net 8)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28440646",
+		"_collection_link": "https://crimson-water-324823.postman.co/workspace/Team-Workspace~d55e16c0-c381-49d7-83cb-25410d386557/collection/28440646-99e55192-82e3-495d-8cad-39bfc711299a?action=share&source=collection_link&creator=28440646"
+	},
+	"item": [
+		{
+			"name": "Read all shirts",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get a shirt",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Update a shirt",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Create a shirt",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"ShirtId\": 1,\r\n    \"Brand\": \"My Brand\",\r\n    \"Color\": \"Blue\"}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:7257/api/shirts/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7257",
+					"path": [
+						"api",
+						"shirts",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a shirt",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:7257/api/shirts/10",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "7257",
+					"path": [
+						"api",
+						"shirts",
+						"10"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
